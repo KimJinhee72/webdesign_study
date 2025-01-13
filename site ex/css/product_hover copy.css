@@ -1,0 +1,44 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul , li{
+    list-style: none;
+}
+img{
+    display: block;
+}
+.container{
+    width: 1000px;
+    margin: auto;
+    background-color: antiquewhite;
+    
+}
+/* ul {
+    margin-right: 20px ;
+} */
+.prod-list {
+    display: flex;
+    justify-content: space-evenly;
+}
+/* 호버시 li 영역을 잡아줘야 영역이 커지지x */
+.prod-list li{
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+.prod-list > li:hover .caption{
+    transform: translateY(-200px);
+    display: block;
+    text-align: center;
+    padding: 50px;
+    line-height: 30px;
+}
+.caption{
+    width: 300px;
+    height: 200px;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
