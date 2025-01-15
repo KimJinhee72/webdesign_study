@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- seo 엔진 최적화 -->
     <!-- 웹페이지의 설명을 정의 -->
     <meta name="description" content="STX건설 웹사이트입니다." />
@@ -17,25 +19,57 @@
     <!-- 소셜 미디어에서 페이지가 웹사이트임을 명시 -->
     <meta property="og:type" content="website" />
     <!-- Open Graph 프로토콜에서 사용되는 메타 태그의 속성 중 하나로, 
-    페이지의 간략한 설명을 제공하는 데 사용 -->
+     페이지의 간략한 설명을 제공하는 데 사용 -->
     <!-- 소셜 미디어에서 공유될 때 사용되는 URL -->
     <meta property="og:url" content="https://github.io/" />
     <!-- 소셜 미디어에서 페이지가 공유될 때 표시되는 이미지 -->
     <meta property="og:image" content="images/metaimg.png" />
     <!-- 소셜 미디어에서 페이지가 공유될 때 사용되는 설명 -->
     <meta property="og:description" content="STX건설 웹사이트입니다." />
-    <!-- favicon적용 -->
-    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-    <link rel="shortcut icon" href="images/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-    <link rel="manifest" href="images/site.webmanifest" /> 
-    <!-- CSS 초기화 -->    
-    <link rel="stylesheet" href="css/reset.css"><!--이것 먼저써야함-->
-    <link rel="stylesheet" href="css/stlye.css">
-    <title>stx건설</title>
-</head>
+    <!-- fivicon적용 -->
+    <link rel="icon" type="image/png" href="images/icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/icon/favicon.svg" />
+    <link rel="shortcut icon" href="images/icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-touch-icon.png" />
+    <link rel="manifest" href="images/icon/site.webmanifest" />
+    <!-- css초기화 -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/stlye.css" />
+    <!-- js -->
+    <!-- <script src="js/main.js" defer></script> -->
+    <script src="js/main.js"></script>
+    <title>STX 건설</title>
+  </head>
+
 <body>
+    <!-- 모달창 -->
+    <div class="modal-wrap">
+      <div class="modal-main">
+        <span class="modal-logo"></span>
+        <p class="modal-notice">
+          해당 사이트는 <strong>스터디용</strong>으로 제작되었으며,<br />
+          리소스는 <strong>원저작자</strong>에게 있음을 알려드립니다.<br />
+          문제사항이 있을 시 연락주시면 빠른 시일 내 조치하겠습니다.<br />
+          <span>본 사이트는 Chrome 에 최적화되어 있습니다.</span>
+        </p>
+        <!-- close -->
+         <div class="modal-close">
+          확인했습니다.
+          <i>(click 하여 닫기)</i>
+         </div>
+      </div>
+    </div>
+    <!-- 탑버든 -->
+    <div class="top-btn-wrap">
+      <a href="#" class="caht-btn">
+        <img src="images/chat-btn.png" alt="chat">
+        <span>무엇을 도와드릴까요?</span>
+      </a>
+      <a href="#" class="shop-btn">STX</a>
+      <a href="#" class="top-btn">
+        <img src="images/top-btn.png" alt="top-btn" class="top-btn-img">
+      </a>
+    </div>
     <!-- 전체레이아웃 -->
     <div class="wrap">
         <!-- 상단 -->
@@ -128,7 +162,7 @@
             </div>
         </section>
         <!-- 비지니스 -->
-        <section class= "business">
+        <section class= "business" id="business">
             <div class="business-inner container">
                 <!-- 비지니스 상단 -->
                 <div class="business-top">
@@ -152,20 +186,154 @@
         </section>
         <!-- 뉴스 -->
         <section class="news">
-            <div class="news-inner container"></div>
-        </section>
-        <!-- 고객센터 -->
-        <section class="cs">
-            <div class="cs-inner container"></div>
-        </section>
-        <!-- 회사소개 -->
-        <section class="about">
-            <div class="about-inner container"></div>
-        </section>
-        <!-- 하단 -->
-        <footer class="footer">
-            <div cl"footer-inner container></div>
-        </footer>
+          <!-- 빈배열 -->
+            <div class="news-bg"></div>
+            <div class="news-inner container">
+               <!-- 공지사항 -->
+          <div class="news-wrap">
+            <h3>공지사항</h3>
+            <div class="news-content">
+              <ul class="news-list">
+                <li>
+                  <a href="#">
+                    <span class="news-txt"> 분할계획서 변경공고 </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="news-txt"> 에스티엑스건설자산관리 주식회사 해산결의에 따른 채권신고 안내 공고 (2차) </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="news-txt"> 회사분할에 따른 주권제출 및 채권자 이의제출공고 </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="news-txt"> 본점 소재지 변경 알림 </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 보도자료 -->
+          <div class="news-wrap">
+            <h3>보도자료</h3>
+            <div class="news-content">
+              <ul class="news-list">
+                <li>
+                  <a href="#">
+                    <span class="news-txt"> STX건설, 춘천 레고랜드 테마파크 시공사 ‘선정’ </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="news-txt"> STX건설, 춘천 레고랜드 테마파크 시공사 ‘선정’ </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="news-txt"> STX건설, 춘천 레고랜드 테마파크 시공사 ‘선정’ </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+   <!-- 고객센터 -->
+   <section class="cs">
+    <div class="cs-inner container">
+      <!-- faq -->
+      <a href="#" class="cs-link">
+        <h3>FAQ</h3>
+        <p>
+          STX건설 고객님들을 위해<br />
+          자주하시는 질문과 답변을 정리하였습니다.
+        </p>
+      </a>
+      <!-- 고객센터 -->
+      <a href="#" class="cs-link">
+        <h3>고객센터</h3>
+        <p>
+          STX건설 고객상담은 고객만족<br />
+          서비스를 위하여 최선을 다하고 있습니다.
+        </p>
+      </a>
     </div>
-</body>
+  </section>
+      <!-- 회사소개 -->
+      <section class="about">
+        <div class="about-inner container">
+          <!-- about-top -->
+          <div class="about-top">
+            <h2>ABOUT US</h2>
+            <p>
+              <b><!--볼드 강조-->
+                고객의 믿음과 신뢰로 성장하는<br />
+                STX건설이 되겠습니다.
+              </b>
+              STX건설 이름으로 세계 어디에서, 세계 누구와 겨뤄도<br />
+              자신 있는 세계 최고를 향해 웅비합니다. STX건설이라는 날개를<br />
+              하나 더 피고 세계로, 미래로 나아가는 STX건설의 힘찬 비상을
+              주목해<br />
+              주십시오.
+            </p>
+          </div>
+
+          <!-- about-bt -->
+          <div class="about-bt">
+            <ul class="about-list">
+              <li>
+                <a href="#"><span>경영이념</span></a>
+              </li>
+              <li>
+                <a href="#"><span>공유가치</span></a>
+              </li>
+              <li>
+                <a href="#"><span>중장기전략</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- 하단 -->
+      <footer class="footer">
+        <div class="footer-inner container">
+          <!-- 하단 로고 -->
+           
+<a href="#" class="ft-logo">
+  <img src="images/logo_footer.png" alt="STX건설">
+</a>
+          <!-- 카피라이터 -->
+           <div class="ft-info">
+            <ul class="ft-list">
+              <li>
+                <address>
+                  부산사무소 : (48938) 부산광역시 중구 충장대로5번길 22
+                  (중앙동4가) SM상선빌딩 7층 &nbsp;<i>&middot;</i>&nbsp;TEL :
+                  051-791-3000&nbsp;<i>&middot;</i>&nbsp;FAX : 051-791-3099
+                  <!-- &nbsp 띄우기;<i>&middot;</i>&nbsp; - 점찍기. -->
+                </address>
+              </li>
+              <li>
+                <address>
+                  창원사무소 : (51494) 경상남도 창원시 성산구 중앙대로 84번길 3,
+                  9층904호 &nbsp;<i>&middot;</i>&nbsp;TEL :
+                  055-263-2060&nbsp;<i>&middot;</i>&nbsp;FAX : 055-263-2087
+                </address>
+              </li>
+              <li>
+                <!-- &copy; 동그라미 안에 모양 -->
+                Copyright &copy; 2018 STX CONSTRUCTION. LTD. All Rights
+                Reserved.
+              </li>
+            </ul>
+           </div>
+
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>

@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +10,7 @@ a {
   color: #333;
 }
 body {
-  height: 1500px;
+  font-family: "Noto Sans KR", serif;
 }
 /* 공통영역 */
 .container {
@@ -17,6 +18,128 @@ body {
   max-width: 1200px;
   margin: auto;
 }
+/* 모달창 */
+.modal-wrap{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  
+  background-color: rgba(0, 0 , 0 , 0.5);
+}
+.modal-main{
+  position: absolute;
+  display: block;
+  padding: 50px;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 30px;
+  padding-top: 150px;
+  transform: translate(-50% , -50%);
+  text-align: center;
+  background-color: #fff;
+  
+}
+.modal-logo{
+  position: absolute;
+  display: block;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: url(../images/chat-btn.png) no-repeat #ed1c24;
+  background-position: 0 -10px;
+}
+.modal-notice{
+  line-height: 2;
+  font-size: 20px;
+  font-weight: 500;
+}
+.modal-notice strong{
+  color: #ed1c24;
+  background: linear-gradient(to top, yellow 50%, transparent 50%);
+}
+.modal-notice span{
+  font-size: 16px;
+  font-weight: 300;
+}
+.modal-close{
+  background-color: #d8d8d8;
+  padding: 15px;
+  border-radius: 0 0 30px 30px;
+}
+/* 탑버튼 */
+.top-btn-wrap{
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* background-color: antiquewhite; */
+}
+.top-btn{
+  width: 55px;
+  line-height: 55px;
+  border-radius: 50%;
+  background-color: #ed1c24;
+  text-align: center;
+  box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+
+}
+.caht-btn{
+  animation: updown 1.5s infinite;
+}
+@keyframes updown{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-10%);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.caht-btn span{
+  position: absolute;
+  top:30px;
+  left: -186px;
+  width: 180px;
+  padding: 8px 10px;
+  border-radius: 23px;
+  text-align: center;
+  box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+  display: none;
+  background-color: #fff;
+}
+.caht-btn a:hover{
+  display: block;
+}
+.shop-btn{
+  position: relative;
+  display: block;
+  width: 55px;
+  line-height: 55px;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+}
+/* 전체레이아웃 */
 .wrap {
   position: relative;
   display: block;
@@ -86,6 +209,10 @@ body {
 }
 .gnb > li {
   width: calc(100% / 6);
+
+}
+.gnb > li:hover> a{
+  color: red;
 }
 .gnb > li > a {
   font-size: 19px;
@@ -95,6 +222,9 @@ body {
 /* depth2 */
 .depth2 {
   padding: 40px 0;
+}
+.depth2 > li:hover > a{
+  color: red;
 }
 .depth2 > li > a {
   color: #fff;
@@ -198,6 +328,7 @@ body {
   padding: 100px 0;
   background-color: aqua;
 }
+
 .business-inner {
   position: relative;
   display: block;
@@ -219,7 +350,7 @@ body {
 .business-title::after{
     content: "";
     position: absolute;
-    l
+    
     
 }
 .business-desc {
@@ -270,4 +401,262 @@ body {
     transition: all 0.5s
 }
 .business-list > li > a:hover{
-background-color: rgba(244, 128, 37, 1) ;}
+background-color: rgba(244, 128, 37, 1) ;
+}
+.business-list > li > a::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url(../images/bg_common.png) no-repeat;
+  width: 130px;
+  height: 112px;
+  background-position:0 0;
+  opacity: 0;
+  transition: all 0.5s;
+}
+/* 백그라운드 이미지를 한번에 주어 사용하는 방법
+이미지를 하나하나씩 쓰는 것이 좋음 */
+.business-list > li > a:hover::after{
+  opacity: 1;
+}
+.business-list > li:nth-child(1) > a::after{
+  background-position: -169px 0;
+}
+.business-list > li:nth-child(2) > a::after{
+  background-position: -298px 0;
+}
+.business-list > li:nth-child(3) > a::after{
+  background-position: 0px -117px;
+}
+.business-list > li:nth-child(4) > a::after{
+  background-position: -139px -122px;
+}
+.business-list > li:nth-child(5) > a::after{
+  background-position: -274px -115px;
+}
+/* news */
+.news{
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 55px 0;
+  background-color: #ed1c24;
+}
+.news-bg{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background-color: #58585b;
+}
+.news-inner{
+  position: relative;
+  display: flex;
+  
+  gap: 95px;
+}
+.news-wrap{
+  position: relative;
+  display: block;
+  width: 50%;
+}
+.news-wrap h3{
+  font-size: 32px;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 45px;
+}
+.news-content{
+  position: relative;
+  display: block;
+  
+}
+.news-list li{
+  position: relative;
+  display: block;  
+  padding: 25px 0 ;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+.news-list li:last-child{
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  
+}
+.news-list li a{
+  position: relative;
+  display: block;
+  color: #fff;
+  font-size: 16px;
+}
+/* .news-list li a {
+  padding-right: 100px;
+} */
+.news-list li a::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 29px;
+  width: 48px;
+  height: 23px;
+  background: url(../images/bg_common.png) no-repeat;
+  background-position: 0 -49px;
+}
+.news-txt{  
+  display: block;
+  width: 70%;
+  /* 글자는 줄내림하지 말고 */
+  white-space: nowrap;
+  /* 넘어가는 것은 ...표시 */
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* cs */
+.cs{
+  position: relative;
+  display: block;
+  padding: 60px 0;
+  background-color: #f8f8f8;
+}
+.cs-inner{
+  display: flex;
+  gap: 2px;
+}
+.cs-link{
+  position: relative;
+  display: block;
+  width: 50%;
+  padding: 40px 60px;
+  
+  background-color: #fff;
+}
+.cs-link:first-child{
+  background: url(../images/bg_faq.png) no-repeat #fff;
+  background-position: calc(100% - 40px);
+}
+.cs-link:last-child{
+  background: url(../images/bg_custom.png) no-repeat #fff;
+  background-position: calc(100% - 40px);
+}
+.cs-link h3{
+  position: relative;
+  display: block;
+  color: #333;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.cs-link p{
+  line-height: 1.4;
+}
+/* about */
+.about{
+  position: relative;
+  display: block;
+  padding: 100px 0;
+  /* background-color: #d8d8d8; */
+}
+.about-inner{
+  position: relative;
+  display: block;
+}
+.about-top{
+  position: relative;
+  display: block;
+  background: url(../images/img_about.png) no-repeat;
+  background-position: 100%;
+}
+.about-top h2 {
+  position: relative;
+  display: block;
+  font-size: 44px;
+  color: #111;
+  font-weight: 600;
+  padding-top: 35px;
+  margin-bottom: 55px;
+  text-transform: uppercase;
+  
+}
+.about-top p{
+  position: relative;
+  display: block;
+  font-size: 15px;
+  padding-left: 100px;
+  padding-bottom: 70px;
+  line-height: 1.4;
+}
+.about-top p::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 37px;
+  height: 5px;
+  
+  background-color: #ed1c24;
+}
+.about-top p b{
+  position: relative;
+  display: block;
+  font-size: 21px;
+  font-weight: bold;
+  color: #111;
+  line-height: 1.4;
+  padding-bottom: 25px;
+}
+/* about-bt */
+.about-bt{
+  position: relative;
+  display: block;
+  text-align: center;
+  padding-top: 100PX;
+}
+.about-list{
+  position: relative;
+  display: flex;
+  width: 780px;
+  margin: auto;
+  line-height: 50PX;
+  justify-content: space-around;
+}
+.about-list li{
+  position: relative;
+
+}
+.about-list li a::before{
+  content: "";
+  display: block;
+  width: 110px;
+  height: 108px;
+  background: url(../images/bg_icon.png) no-repeat;
+}
+.about-list li:first-child a::before{
+  background-position: 0 0;
+  }
+.about-list li:nth-child(2) a::before{
+  background-position: -110px 0;
+  }
+.about-list li:nth-child(3) a::before{
+  background-position: -230px 0;
+  }
+.footer{
+  position: relative;
+  display: block;
+  padding: 50px 0;
+  background-color: #4e4e4e;
+}
+.footer-inner{
+  position: relative;
+  display: flex;
+  gap: 130px
+}
+.ft-list li{
+  position: relative;
+  display: block;
+  font-size: 13px;
+  color: #c3c3c3;
+  margin-top: 8px;
+}
