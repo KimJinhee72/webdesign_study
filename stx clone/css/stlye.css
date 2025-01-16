@@ -32,7 +32,6 @@ body {
 .modal-main{
   position: absolute;
   display: block;
-  padding: 50px;
   top: 50%;
   left: 50%;
   width: 600px;
@@ -41,10 +40,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 30px;
-  padding-top: 150px;
+  padding-top: 170px;
   transform: translate(-50% , -50%);
   text-align: center;
   background-color: #fff;
+
   
 }
 .modal-logo{
@@ -57,7 +57,9 @@ body {
   height: 130px;
   border-radius: 50%;
   background: url(../images/chat-btn.png) no-repeat #ed1c24;
-  background-position: 0 -10px;
+  /* 동그랗게 쌓이게 됨*/
+  border: 6px solid #fff;
+  background-position: 50% 40% ;
 }
 .modal-notice{
   line-height: 2;
@@ -83,14 +85,19 @@ body {
   right: 30px;
   bottom: 60px;
   z-index: 99999;
+/* 아래위로 이미지 들어가게 */
   display: flex;
   flex-direction: column;
+  /* text가 아니라 align item이다 */
   align-items: center;
+  /* 딱 붙어 있으면 gap주면 됨 */
   gap: 10px;
   /* background-color: antiquewhite; */
 }
 .top-btn{
   width: 55px;
+  /* 화살표만 있어 동그라미 만들어주려
+  보더라디우스 text align center 함 */
   line-height: 55px;
   border-radius: 50%;
   background-color: #ed1c24;
@@ -124,7 +131,7 @@ body {
   display: none;
   background-color: #fff;
 }
-.caht-btn a:hover{
+.caht-btn:hover span{
   display: block;
 }
 .shop-btn{
