@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/snake-c.png">
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="icon" href="images/snake-c.png" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+
     <title>카카오프렌즈 클론코딩</title>
   </head>
   <body>
@@ -28,24 +30,174 @@
               <a href="#">
                 <img src="images/car_delivery.png" alt="주문하기" />
               </a>
-              <a href="#">
-                <img src="images/cart3.png" alt="장바구니" /> </a
-              >
-              <h2>로그인</h2>
+              <a href="#"> <img src="images/cart3.png" alt="장바구니" /> </a>
+              <a href="#">로그인</a>
             </div>
           </div>
           <!-- 해더바텀 -->
+          <div class="header_bottom">
+            <ul class="header_bt_tname">
+              <li>
+                <a href="index.html">
+                  <img src="images/kakaoname.jpg" alt="카카오이름" />
+                </a>
+              </li>
+            </ul>
+            <div class="header_bt_bmenu">
+              <!-- <ul> -->
+              <ul class="header_bt_bmenu">
+                <li>
+                  <a href="#"><h4>홈</h4></a>
+                </li>
+                <li>
+                  <a href="#"><h4>BEST SALE</h4></a>
+                </li>
+                <li>
+                  <a href="#"><h4>NEW ARRIVAL</h4></a>
+                </li>
+                <li>
+                  <a href="#"><h4>해리포터</h4></a>
+                </li>
+                <li>
+                  <a href="#"><h4>오늘의요정</h4></a>
+                </li>
+                <li>
+                  <a href="#"><h4>오징어게임2</h4></a>
+                </li>
+                <li>
+                  <a href="#"><h4>푸른뱀춘식이</h4></a>
+                </li>
+                <!-- ul에 메뉴를 담아 flex를 하려면 ul의 li에 각각 하나씩 담기
+               그리고 ul에 flex  -->
+              </ul>
+              <label for="name">
+                <!-- input 바닥글씨 placeholder  이미지는 배경으로 깔아주기-->
+                <input type="text" class="name" placeholder="카카오프렌즈 상품검색" />
+              </label>
+            </div>
+          </div>
         </div>
       </header>
       <!-- 메인 -->
       <main class="main">
-        <div class="inner"></div>
+        <div class="inner">
+          <!-- 메인베너 -->
+          <!-- Swiper -->
+          <div class="swiper visual_Swiper">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <a href="#">
+                  <img src="images/harrypotterbanner.jpg" alt="해리포터배너" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="#">
+                  <img src="images/angelbanner.jpg" alt="요정배너" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="#">
+                  <img src="images/ogamebanner.jpg" alt="오징어게임2배너" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="#">
+                  <img src="images/snake-c-banner.jpg" alt="푸른뱀춘식이배너" />
+                </a>
+              </li>
+            </ul>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- Swiper JS -->
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+          <!-- Initialize Swiper -->
+          <script>
+            var swiper = new Swiper(".visual_Swiper", {
+              // 마지막 슬라이드 사이즈도 맞춰지고 처음으로 연결됨
+              loop: true,
+              spaceBetween: 30,
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              cssMode: true,
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+              pagination: {
+                el: ".swiper-pagination",
+              },
+              mousewheel: true,
+              keyboard: true,
+            });
+          </script>
+          <!-- 메인 new -->
+           <div class="new">
+            <div class="inn-inner">
+              <div class="info">
+                <ul class="new_img">
+                 <span>NEW</span><span>새로 나왔어요</span>
+                  <li>
+                   <a href="#">
+                    <img src="images/mush-chunsik (2).jpg" alt="능이춘식이">
+                    <h3>오늘의요정 인형 능이 <br>요정_춘식이 <p>26,000원</p></h3>
+                   </a>
+                  </li>
+                  <li>
+                   <a href="#">
+                    <img src="images/mush-chunsik (2).jpg" alt="능이춘식이">
+                    <h3>오늘의요정 인형 능이 <br>요정_춘식이 <p>26,000원</p></h3>
+                   </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+           
+           <!-- 메인 icon -->
+           <div class="icon">
+            <div class="inn-inner">
+              
+            </div>
+            
+           </div>
+           <!-- 메인 best -->
+           <div class="best">
+             <div class="inn-inner">
+               <span>BEST</span><span>제일 잘 나가요</span>
+              <div class="info">
+                <ul class="best_img">
+                  <li>
+                    <a href="#">
+                     <img src="images/mush-chunsik (2).jpg" alt="능이춘식이">
+                     <h3>오늘의요정 인형 능이 요정_춘식이 <p>26,000원</p></h3>
+                    </a>
+                   </li>
+                  
+                </ul>
+              </div>
+              </div>
+           </div>
+           <!-- 메인 notice -->
+           <div class="notice">
+             <div class="inn-inner">
+            </div>  
+          
+          
+          </div>
+            
+           </div>
+        </div>
       </main>
 
       <!-- 풋터 -->
       <footer class="footer">
         <div class="inner"></div>
-
       </footer>
     </div>
   </body>
