@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/snake-c.png" />
+    <link rel="icon" href="images/snake-c-round.png" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
 
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="js/style.js" />
     <title>카카오프렌즈 클론코딩</title>
   </head>
   <body>
@@ -20,7 +23,7 @@
           <div class="header_top">
             <!-- 해더탑로고 -->
             <div class="header_logo">
-              <a href="#"> <img src="images/snake-c.png" alt=푸른뱀 춘식이"> </a>
+              <a href="#"> <img src="images/snake-c-round.png" alt=푸른뱀 춘식이"> </a>
             </div>
             <!-- 해더탑 메뉴 -->
             <div class="header_menu">
@@ -81,6 +84,7 @@
       <!-- 메인 -->
       <main class="main">
         <div class="inner">
+          
           <!-- 메인베너 -->
           <!-- Swiper -->
           <div class="swiper visual_Swiper">
@@ -119,6 +123,10 @@
             var swiper = new Swiper(".visual_Swiper", {
               // 마지막 슬라이드 사이즈도 맞춰지고 처음으로 연결됨
               loop: true,
+              autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+              },
               spaceBetween: 30,
               pagination: {
                 el: ".swiper-pagination",
@@ -136,63 +144,134 @@
               keyboard: true,
             });
           </script>
+          
+          <!-- 인너 안에 인너 -->
+          <div class="in_inner">
           <!-- 메인 new -->
-           <div class="new">
-            <div class="inn-inner">
-              <div class="info">
-                <ul class="new_img">
-                 <span>NEW</span><span>새로 나왔어요</span>
-                  <li>
-                   <a href="#">
-                    <img src="images/mush-chunsik (2).jpg" alt="능이춘식이">
-                    <h3>오늘의요정 인형 능이 <br>요정_춘식이 <p>26,000원</p></h3>
-                   </a>
-                  </li>
-                  <li>
-                   <a href="#">
-                    <img src="images/mush-chunsik (2).jpg" alt="능이춘식이">
-                    <h3>오늘의요정 인형 능이 <br>요정_춘식이 <p>26,000원</p></h3>
-                   </a>
-                  </li>
-                </ul>
+          <div class="new">
+              <span>NEW</span><span>새로 나왔어요</span>
+          <!-- Swiper -->
+          <div class="swiper newSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#">                  
+                <img src="images/mush-chunsik (2).jpg" alt="능이춘식이" />
+                <h3>
+                  오늘의요정 인형 능이 <br />요정_춘식이
+                  <p>26,000원</p>
+                </h3>
+                </>
               </div>
-            </div>
-            
-           
-           <!-- 메인 icon -->
-           <div class="icon">
-            <div class="inn-inner">
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="images/ch-chunsik.jpg" alt="치킨춘식이" />
+                  <h3>
+                    오늘의요정 인형 치킨 <br />요정_춘식이
+                    <p>26,000원</p>
+                  </h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="images/half-chunsik.jpg" alt="반반춘식이" />
+                  <h3>
+                    오늘의요정 인형 반반 <br />요정_춘식이
+                    <p>26,000원</p>
+                  </h3>
+                </a>
+                
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="images/key-chunsik.jpg" alt="춘식이키링" />
+                  <h3>
+                    오늘의요정 무빙 <br />키링_춘식이
+                    <p>18,000원</p>
+                  </h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="images/allkey-chunsik.jpg" alt="춘식이키링모두" />
+                  <h3>
+                    [풀세트] 오늘의요정 <br />인형키링_춘식이 6종
+                    <p>79,000원</p>
+                  </h3>
+                </a>
+              </div>
               
             </div>
-            
-           </div>
-           <!-- 메인 best -->
-           <div class="best">
-             <div class="inn-inner">
-               <span>BEST</span><span>제일 잘 나가요</span>
-              <div class="info">
-                <ul class="best_img">
-                  <li>
-                    <a href="#">
-                     <img src="images/mush-chunsik (2).jpg" alt="능이춘식이">
-                     <h3>오늘의요정 인형 능이 요정_춘식이 <p>26,000원</p></h3>
-                    </a>
-                   </li>
-                  
-                </ul>
-              </div>
-              </div>
-           </div>
-           <!-- 메인 notice -->
-           <div class="notice">
-             <div class="inn-inner">
-            </div>  
-          
-          
+            <!-- <div class="swiper-pagination"></div> -->
+
+            <div class="swiper-scrollbar"></div>
           </div>
+          <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    // var swiper = new Swiper(".newSwiper", {
+    //   scrollbar: {
+    //     el: ".swiper-scrollbar",
+    //     hide: true,
+    //   },
+    // });
+    var swiper = new Swiper(".newSwiper", {
+      slidesPerView: 3.5,
+      spaceBetween: 20,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      },
+      loop: true,
+              
+    });
+    </script>
+              </div>
             
-           </div>
-        </div>
+
+            <!-- 메인 icon -->
+            <div class="icon">
+              <br>
+              <ul class="icon">
+                <li>
+                  <a href="#">
+                    <img src="images/new-icon.jpg" alt="new아이콘">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- 메인 best -->
+            <div class="best">
+              <span>BEST</span><span>제일 잘 나가요</span>
+                <div class="info">
+                  <ul class="best_img">
+                    <li>
+                      <a href="#">
+                        <img src="images/mush-chunsik (2).jpg" alt="능이춘식이" />
+                        <h3>
+                          오늘의요정 인형 능이 요정_춘식이
+                          <p>26,000원</p>
+                        </h3>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              
+            </div>
+            <!-- 메인 notice -->
+            <div class="notice">
+              <div class="in_inner"></div>
+            </div>
+          </div>
+          </div>
+
+        
       </main>
 
       <!-- 풋터 -->
