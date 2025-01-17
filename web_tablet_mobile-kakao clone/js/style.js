@@ -1,5 +1,4 @@
 window.onload = function () {
-  
     const info = new Swiper(".info" , {
         
         slidesPerView: 3.5,
